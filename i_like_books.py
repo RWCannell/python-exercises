@@ -17,7 +17,7 @@ def get_number_of_book_occurrences():
     text_file.close()
     return total_number_of_occurrences
 
-# 2) function for creating a list of strings contained inside double quotes
+# 2) function for creating a list of authors mentioned in the text file
 def get_listed_authors():
     text_file = open("files/i_like_books.txt", "r")
     text_as_string = text_file.read()
@@ -45,7 +45,7 @@ def get_strings_in_double_quotes():
 
     # brute-force solution using .split()
     split_by_double_quotes = text_as_string.split('\"')
-    # since text in double quotes must have opening and closing tag, only take alternate (odd) entries of split list
+    # since text in double quotes must have opening and closing tag, only take alternate (odd index) entries of split list
     for i in range(len(split_by_double_quotes)):
         if i % 2 == 1:
             strings_in_double_quotes.append(split_by_double_quotes[i])
