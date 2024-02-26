@@ -12,10 +12,20 @@
 def get_number_of_book_occurrences():
     text_file = open("files/i_like_books.txt", "r")
     text_as_string = text_file.read()
+
+    # simple solution using .count()
     occurrences_of_book = text_as_string.count("book")
     total_number_of_occurrences = occurrences_of_book
     text_file.close()
     return total_number_of_occurrences
+
+    # # brute-force solution using .split()
+    # split_by_spaces = text_as_string.split(' ')
+    # count = 0
+    # for i in range(len(split_by_spaces)):
+    #     if 'book' in split_by_spaces[i]:
+    #         count += 1
+    # return count
 
 # 2) function for creating a list of authors mentioned in the text file
 def get_listed_authors():
