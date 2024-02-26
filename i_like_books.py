@@ -42,8 +42,8 @@ def get_strings_in_double_quotes():
     text_file = open("files/i_like_books.txt", "r")
     text_as_string = text_file.read()
     strings_in_double_quotes = []
-    
-    # messy and brute-force solution using .split()
+
+    # brute-force solution using .split()
     split_by_double_quotes = text_as_string.split('\"')
     # since text in double quotes must have opening and closing tag, only take alternate (odd) entries of split list
     for i in range(len(split_by_double_quotes)):
@@ -52,6 +52,11 @@ def get_strings_in_double_quotes():
 
     text_file.close()
     return strings_in_double_quotes
+
+    # # using regex
+    # import re
+    # strings_in_double_quotes = re.findall(r'"([^"]*)"', text_as_string)
+    # return strings_in_double_quotes
 
 # 4) function for getting number of lines in text file
 def get_number_of_non_empty_lines_in_file():
@@ -67,7 +72,7 @@ def get_number_of_non_empty_lines_in_file():
 if __name__ == '__main__':
     # Solution to exercise 1
     total_number_of_occurrences_of_book = get_number_of_book_occurrences()
-    print(f"1) Total number of occurrences of book: {total_number_of_occurrences_of_book}")
+    print(f"1) Total number of occurrences of 'book': {total_number_of_occurrences_of_book}")
 
     # Solution to exercise 2
     listed_authors = get_number_of_non_empty_lines_in_file()
