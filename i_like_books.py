@@ -75,12 +75,12 @@ if __name__ == '__main__':
     print(f"1) Total number of occurrences of 'book': {total_number_of_occurrences_of_book}")
 
     # Solution to exercise 2
-    listed_authors = get_number_of_non_empty_lines_in_file()
-    print(f"2) List of authors: {get_listed_authors()}")
+    listed_authors = get_listed_authors()
+    print(f"2) List of authors: {listed_authors}")
 
     # Solution to exercise 3
     text_in_double_quotes = get_strings_in_double_quotes()
-    print(f"3) List of text in double quotes: {get_strings_in_double_quotes()}")
+    print(f"3) List of text in double quotes: {text_in_double_quotes}")
 
     # Solution to exercise 4
     total_number_of_non_empty_lines = get_number_of_non_empty_lines_in_file()
