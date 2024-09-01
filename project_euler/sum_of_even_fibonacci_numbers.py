@@ -47,7 +47,7 @@ def list_fibonacci_numbers_less_than_upper_bound(upper_bound):
 def calculate_sum_of_even_fibonacci_numbers_less_than_upper_bound(upper_bound):
     even_fibonacci_numbers = []
     fibonacci_number_upper_bound_exceeded = False
-    iteration_number = 1
+    iteration_number = 0
     while not fibonacci_number_upper_bound_exceeded: 
         iteration_number += 1
         fibonacci_number = calculate_nth_fibonacci_number(iteration_number)
@@ -56,7 +56,7 @@ def calculate_sum_of_even_fibonacci_numbers_less_than_upper_bound(upper_bound):
             break
         if fibonacci_number % 2 == 0:
             even_fibonacci_numbers.append(fibonacci_number)
-    print(f"List of even Fibonacci numbers less than upper bound {upper_bound}: {even_fibonacci_numbers}")
+    print(f"List of even Fibonacci numbers less than upper bound {upper_bound} after {iteration_number} iterations: {even_fibonacci_numbers}")
 
     sum_of_even_fibonacci_numbers = 0
     for i in even_fibonacci_numbers:
