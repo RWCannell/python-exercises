@@ -1,5 +1,5 @@
 # Function for finding the sum of multiples of 3 or 5 between 1 and n (excluding n)
-def sum_of_multiples_of_3_or_5(n):
+def calculate_sum_of_multiples_of_3_or_5(n):
     sum = 0
     multiples = []
     for i in range(n):
@@ -13,5 +13,5 @@ def sum_of_multiples_of_3_or_5(n):
 
 if __name__ == '__main__':
     n = 1000
-    sum_of_multiples_of_3_or_5 = sum_of_multiples_of_3_or_5(n)
+    sum_of_multiples_of_3_or_5 = calculate_sum_of_multiples_of_3_or_5(n)
     print(f"Sum of multiples of 3 or 5 less than {n}: {sum_of_multiples_of_3_or_5}")
